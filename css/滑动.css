@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* CSS Document */
+.box {
+margin-top:40px;
+margin-left:150px;
+}
+.winBox {
+width:1000px;
+height:200px;
+overflow:hidden;
+position:relative;
+}
+.scroll {
+/*width的大小是根据下面li的长度和多少个li而定的，需注意！*/
+width:1750px;
+position:absolute;
+}
+.scroll li {
+width:250px;
+float:left;
+margin-left:30px;
+list-style:none;
+}
+

@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>详细</title>
+<link rel="stylesheet" href="css/1.css" type="text/css" />
+<link rel="stylesheet" href="css/放大.css" type="text/css" />
+<style>
+	a:hover{ color:#EEDD9C;text-decoration:none;}
+	a{ color:#EEDD9C;text-decoration:none;}
+</style>
+</head>
+
+<body>
+<div class="div1">
+    	<img src="image/logo.png" style=" margin-left:100px; margin-top:10px; float:left" />
+        <label style="float:left; margin-top:35px">小方酒业</label><br />
+        <div class="div2">
+        	<a href="index.html">首页</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="关于我们.html"> 关于我们</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="名酒展示.html">名酒展示</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="新闻资讯.html">新闻资讯</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="网上商城.html">网上商城</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="联系我们.html">联系我们</a>
+        </div>
+    </div>
+    <div class="zong1">
+        <div class="zonglei">
+            <a href="聚会用酒.html" class="lei"><span style="position:relative; top:4px;">聚会用酒</span></a>
+            <a href="礼节拜访.html" class="lei"><span style="position:relative; top:4px;">礼节拜访</span></a>
+            <a href="婚庆用酒.html" class="lei"><span style="position:relative; top:4px;">婚庆用酒</span></a>
+            <a href="商务用酒.html" class="lei" ><span style="position:relative; top:4px;">商务用酒</span></a>
+        </div>
+        <div class="zong2">
+        	<div id="div1" style="float:left">
+                <div class="small_pic">
+                    <span class="mark"></span>
+                    <span class="float_layer"></span>
+                   	<img src="image/55d56e37n2725bf1a_vbx7.jpg" />
+                </div>
+                <div class="big_pic">
+                	<img src="image/55d56e37n2725bf1a_vbx7.jpg" />
+                </div>
+             </div>
+             <br /><br />
+            <p>法国进口干红葡萄酒 波尔多 AOC整箱6瓶包邮</p>
+             <p>价格：<span style="color:#F00">209.00</span></p>
+             <script>
+             	window.onload = function() {
+				var oDiv = document.getElementById("div1");
+				var oMark = document.getElementsByClassName("mark")[0];
+				var oFloat = document.getElementsByClassName("float_layer")[0];
+				var oBig = document.getElementsByClassName("big_pic")[0];
+				var oSmall = document.getElementsByClassName("small_pic")[0];
+				var oImg = oBig.getElementsByTagName("img")[0];
+				//给遮罩层添加鼠标移入事件
+				oMark.onmouseover = function() {
+				oFloat.style.display = 'block';
+				oBig.style.display = 'block';
+				};
+				//给遮罩层添加鼠标移出事件
+				oMark.onmouseout = function() {
+				oFloat.style.display = "none";
+				oBig.style.display = "none";
+				};
+				//给遮罩层添加鼠标移动事件
+				oMark.onmousemove = function(evt) {
+				var e = evt || window.event;
+				document.title = e.clientX - oDiv.offsetLeft - oSmall.offsetLeft;
+				var l = e.clientX - oDiv.offsetLeft - oSmall.offsetLeft - oFloat.offsetWidth / 2;
+				var t = e.clientY - oDiv.offsetTop - oSmall.offsetTop - oFloat.offsetHeight / 2;
+				if (l < 0) {
+				l = 0;
+				} else if (l > oMark.offsetWidth - oFloat.offsetWidth) {
+				l = oMark.offsetWidth - oFloat.offsetWidth;
+				}
+				if (t < 0) {
+				t = 0;
+				} else if (t > oMark.offsetHeight - oFloat.offsetHeight) {
+				t = oMark.offsetHeight - oFloat.offsetHeight;
+				}
+				oFloat.style.left = l + 'px';
+				oFloat.style.top = t + 'px';
+				//小块活动的距离 （移动比例）大图显示比例
+				var percentX = l / (oMark.offsetWidth - oFloat.offsetWidth);
+				var percentY = t / (oMark.offsetHeight - oFloat.offsetHeight);
+				//大图的left值 = 移动比例 * （大图的宽度 - 大图所在Div的宽度）大图所能移动的距离
+				oImg.style.left = -percentX * (oImg.offsetWidth - oBig.offsetWidth) + 'px';
+				oImg.style.top = -percentY * (oImg.offsetHeight - oBig.offsetHeight) + 'px';
+				};
+				};
+             </script>
+            <div class="dir">  
+                 <div style="position:absolute; left:10px;">
+                 	五粮液为大曲浓香型白酒，产于四川宜宾市，用小麦、大米、玉米、高粱、糯米5种粮食发酵酿制而成，在中国浓香型酒中独<br />
+                   树一帜
+                 </div>
+            </div>  
+            <img src="image/tb2m_2wld.jpg" height="700" width="800" style="position:relative;top:100px;
+            left:100px;" />
+             <p style="position:relative; top:100px;left:100px;">上一个：<a href="" style="color:#000;">无</a></p>
+            <p style="position:relative; top:100px;left:100px;">下一个：<a href="详细1.html" style="color:#000;">青岛一厂精酿经典1903罐装啤酒</a></p>
+      </div>
+   </div>
+    <div class="foot1">
+  		<p id="p1"><img src="image/QQ图片20171125155253.png" height="56" width="186" /></p>
+        <p id="p2">小方酒业限公司     总部地址：北京市朝阳区xxxx路中国铁建广场xxx座xxxxx层
+Copyright © 2009 - 2014 Cld , All Rights Reserved 酒业有限公司   版权所有      陕ICP备1xxxxx17号
+		</p>
+		<p id="p3">
+        	<img class="p3"  src="image/QQ图片20171125160753.png"/>
+            <img class="p3"  src="image/QQ图片20171125160826.png"/>
+            <img class="p3"  src="image/QQ图片20171125160848.png"/>
+            <img class="p3"  src="image/QQ图片20171125160900.png"/>
+        </p>
+  </div>
+</body>
+</html>

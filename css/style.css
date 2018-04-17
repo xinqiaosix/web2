@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.friend{margin:0 auto;overflow:hidden;width:1300px;}
+.mr_frbox{padding:24px 0px 0px;}
+.mr_frBtnL{cursor:pointer;display:inline;float:left;height:46px;margin:160px 10px 0 0;width:28px;}
+.mr_frUl{float:left;height:202px;width:1047px;margin-left:10px;}
+.mr_frBtnR{float:right;margin-top:160px;cursor:pointer;width:28px;height:46px;}
+.mr_frUl ul li{display:inline;float:left;/*height:389px;*/width:300px;overflow:hidden;position:relative;}
+.mr_frUl ul li a img{/*display:block;*/width:100%;}
